@@ -1,0 +1,13 @@
+name: test-mr-cal
+base: core22
+version: '1.0'
+summary: 'hello-world'
+description: 'hello-world'
+grade: devel
+confinement: strict
+
+architectures: [amd64, arm64]
+
+parts:
+  hello-world:
+    plugin: nil
