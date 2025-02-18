@@ -1,17 +1,15 @@
-name: test-mr-cal
-base: core22
-version: '1.0'
-summary: 'hello-world'
-description: 'hello-world'
-grade: devel
+name: hello-world
+version: "1.0"
+summary: test
+description: test12
 confinement: strict
 
-architectures: 
-  - build-on: amd64
-    build-for: amd64
-  - build-on: arm64
-    build-for: arm64
+base: core24
+
+platforms:
+  amd64:
+  arm64:
 
 parts:
-  hello-world:
+  my-part:
     plugin: nil
