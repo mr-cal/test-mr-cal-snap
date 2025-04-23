@@ -10,12 +10,12 @@ jobs:
     if: ${{ github.event.label.name == 'run-manual-spread' || github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: echo "howdy"
+      - name: fail
+        run: exit 1
 
   snap-tests:
     runs-on: ubuntu-latest
     needs: [snap-build]
     steps:
       - name: test2
-        run: echo "howdy howdy"
+        run: echo "what's going to happen?"
