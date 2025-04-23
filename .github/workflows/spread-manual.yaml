@@ -14,6 +14,7 @@ jobs:
         run: exit 1
 
   snap-tests:
+    if: ${{ github.event.label.name == 'run-manual-spread' || github.event_name == 'schedule' }}
     runs-on: ubuntu-latest
     needs: [snap-build]
     steps:
